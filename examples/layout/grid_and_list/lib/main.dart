@@ -3,21 +3,23 @@ import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
 void main() {
   debugPaintSizeEnabled = false; // Set to true for visual layout
-  runApp(MyApp());
+  runApp(MyApp());// void main sendiri artinya dimana aplikasi yang pertama di jalankan adalah void dengan nama app "myapp"
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { // ini merupakan class app yang akan di buat dan akan ada widget di dalam class tersebut
   static final showGrid = true; // Set to false to show ListView
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { // widget ini akan mengembalikan nilai return dari nama app yaitu my app dengan titile "flutter layout
     return MaterialApp(
       title: 'Flutter layout demo',
       home: Scaffold(
         appBar: AppBar(
           title: Text('Flutter layout demo'),
         ),
-        body: Center(child: showGrid ? _buildGrid() : _buildList()),
+        body: Center(
+          child: showGrid ? 
+            _buildGrid() : _buildList()),
       ),
     );
   }
